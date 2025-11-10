@@ -65,7 +65,39 @@ Exit mariaDB
 ```shell
 exit
 ```
-#Backend
+##Backend
+
+change the working directory to backend using the command
+
+```shell
+cd Easycrud/backend/
+```
+copy the file(application.properties) to present directory
+```shell
+cp src/main/resources/application.properties .
+```
+Edit the file application.properties
+```shell
+nano application.properties
+```
+create dockerfile for backend
+```shell
+nano dockerfile
+```
+--data for dockerfile
+FROM maven:3.8.3-openjdk-17
+COPY . /opt 
+WORKDIR /opt
+RUN rm -rf src/main/resources/application.properties
+RUN cp -rf application.properties src/main/resources
+RUN mvn clean package
+WORKDIR /opt/target
+EXPOSE 8080
+CMD ["java" , "-jar" , "student-registration-backend-0.0.1-SNAPSHOT.jar"]
+
+--Build the docker image
+
+
 
 
 
