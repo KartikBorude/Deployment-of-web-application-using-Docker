@@ -65,6 +65,7 @@ Exit mariaDB
 ```shell
 exit
 ```
+
 ##Backend
 
 change the working directory to backend using the command
