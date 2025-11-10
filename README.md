@@ -74,14 +74,17 @@ change the working directory to backend using the command
 cd Easycrud/backend/
 ```
 copy the file(application.properties) to present directory
+
 ```shell
 cp src/main/resources/application.properties .
 ```
 Edit the file application.properties
+
 ```shell
 nano application.properties
 ```
 create dockerfile for backend
+
 ```shell
 nano dockerfile
 ```
@@ -131,17 +134,21 @@ docker ps
 ## Frontend
 
 --change the working directory to frontend
+
 ```shell
 cd Easycrud/fronted/
 ```
 -- Edit the .env file
+
 ```shell
 nano .env
 ```
 change the public IP
+
 VITE_API_URL = "http://public IP of instance:8080/api" and save the .env file
 
 --create dockerfile for frontend
+
 ```shell
 nano dockerfile
 ```
@@ -186,6 +193,8 @@ check the created container
 docker ps
 ```
 To check whether the website is deployed or not paste the public IP to chrome. 
+
+THANK YOU !!!
 
 
 
