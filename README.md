@@ -5,13 +5,13 @@
 
 
 ```shell
-   sudo -i
+sudo -i
 ```
 
 -- update the instance
 
 ```shell
-   apt update
+apt update
 ```
 ## Prerequisities of the project for frontend ,backend and database
 
@@ -29,12 +29,14 @@ For frontend
 
 For Database
 
+--Install MariaDB
+
 --clone the repository from github
 ```shell
 git clone https://github.com/Rohit-1920/EasyCRUD.git
 ```
 
---Install MariaDB
+
 
 ## Database-setup
 
@@ -51,17 +53,19 @@ mysql -h database-1.cxaywyasm64g.ap-southeast-2.rds.amazonaws.com -u admin -p
 ```
 enter the root password
 
-create database and user
+create new database and user
 
 ```shell
 CREATE DATABASE student_db;
 GRANT ALL PRIVILEGES ON springbackend.* TO 'username'@'localhost' IDENTIFIED BY 'your_password';
 ```
-replace the useername and yourpassword
+replace the username and your_password which you have created
 
-exit mariaDB
+Exit mariaDB
 ```shell
 exit
 ```
+#Backend
+
 
 
