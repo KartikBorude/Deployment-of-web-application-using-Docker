@@ -14,7 +14,7 @@
    apt update
 ```
 ## Prerequisities of the project for frontend ,backend and database
--- For backend
+##For backend
 
 --Java Development Kit (JDK 17 or higher) installed.
 
@@ -22,11 +22,11 @@
 
 --Spring Boot application source code or JAR file.
 
---For frontend
+##For frontend
 
 --Install Node.js and npm
 
---For Database
+##For Database
 
 --Install MariaDB
 
