@@ -15,7 +15,7 @@
 ```
 ## Prerequisities of the project for frontend ,backend and database
 
-##For backend
+For backend
 
 --Java Development Kit (JDK 17 or higher) installed.
 
@@ -23,11 +23,11 @@
 
 --Spring Boot application source code or JAR file.
 
-##For frontend
+For frontend
 
 --Install Node.js and npm
 
-##For Database
+For Database
 
 --clone the repository from github
 ```shell
@@ -49,6 +49,19 @@ apt install mysql-client -y
 mysql -h (endpoint of the database which we have created) -u admin -p
 mysql -h database-1.cxaywyasm64g.ap-southeast-2.rds.amazonaws.com -u admin -p
 ```
-enter password
+enter the root password
+
+create database and user
+
+```shell
+CREATE DATABASE student_db;
+GRANT ALL PRIVILEGES ON springbackend.* TO 'username'@'localhost' IDENTIFIED BY 'your_password';
+```
+replace the useername and yourpassword
+
+exit mariaDB
+```shell
+exit
+```
 
 
