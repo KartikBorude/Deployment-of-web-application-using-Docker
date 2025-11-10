@@ -17,7 +17,9 @@
 -- For backend
 
 --Java Development Kit (JDK 17 or higher) installed.
+
 --Maven installed.
+
 --Spring Boot application source code or JAR file.
 
 --For frontend
