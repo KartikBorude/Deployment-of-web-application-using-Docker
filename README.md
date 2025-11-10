@@ -66,7 +66,7 @@ Exit mariaDB
 exit
 ```
 
-##Backend
+## Backend
 
 change the working directory to backend using the command
 
@@ -128,6 +128,64 @@ docker run -d -p 8080:8080 backend:v1
 ```shell
 docker ps
 ```
+## Frontend
+
+--change the working directory to frontend
+```shell
+cd Easycrud/fronted/
+```
+-- Edit the .env file
+```shell
+nano .env
+```
+change the public IP
+VITE_API_URL = "http://public IP of instance:8080/api" and save the .env file
+
+--create dockerfile for frontend
+```shell
+nano dockerfile
+```
+Data for dockerfile
+
+--FROM node:25-alpine3.21
+
+--COPY . /opt
+
+--WORKDIR /opt
+
+--RUN apk update -y
+
+--RUN apk add apache2
+
+--RUN npm install
+
+--RUN npm run build
+
+--RUN cp -rf dist/* /var/www/localhost/htdocs/
+
+--EXPOSE 80
+
+--CMD ["httpd" , "-D" , "FOREGROUND"]
+
+Build docker image
+
+```shell
+docker build . -t frontend:v2
+```
+Check the created image
+
+```shell
+docker images
+```
+run the docker container from the created image
+```shell
+docker run -d -p 80:80 frontend:v2
+```
+check the created container 
+```shell
+docker ps
+```
+To check whether the website is deployed or not paste the public IP to chrome. 
 
 
 
