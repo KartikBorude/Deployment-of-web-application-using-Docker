@@ -84,29 +84,49 @@ create dockerfile for backend
 ```shell
 nano dockerfile
 ```
---data for dockerfile
-FROM maven:3.8.3-openjdk-17
+Data for dockerfile
 
-COPY . /opt 
+--FROM maven:3.8.3-openjdk-17
 
-WORKDIR /opt
+--COPY . /opt 
 
-RUN rm -rf src/main/resources/application.properties
+--WORKDIR /opt
 
-RUN cp -rf application.properties src/main/resources
+--RUN rm -rf src/main/resources/application.properties
 
-RUN mvn clean package
+--RUN cp -rf application.properties src/main/resources
 
-WORKDIR /opt/target
+--RUN mvn clean package
 
-EXPOSE 8080
+--WORKDIR /opt/target
 
-CMD ["java" , "-jar" , "student-registration-backend-0.0.1-SNAPSHOT.jar"]
+--EXPOSE 8080
 
-
---Build the docker image
+--CMD ["java" , "-jar" , "student-registration-backend-0.0.1-SNAPSHOT.jar"]
 
 
+Build the docker image
+
+```shell
+docker build . -t backend:v1
+```
+
+--check the created image
+
+```shell
+docker images
+```
+ Now run the container using the image
+
+```shell
+docker run -d -p 8080:8080 backend:v1
+```
+
+--Check the created container
+
+```shell
+docker ps
+```
 
 
 
