@@ -14,6 +14,7 @@
    apt update
 ```
 ## Prerequisities of the project for frontend ,backend and database
+
 ##For backend
 
 --Java Development Kit (JDK 17 or higher) installed.
