@@ -194,7 +194,5 @@ docker ps
 ```
 To check whether the website is deployed or not paste the public IP to chrome. 
 
-THANK YOU !!!
-
 
 
