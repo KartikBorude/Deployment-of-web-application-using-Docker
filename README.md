@@ -90,23 +90,17 @@ nano dockerfile
 ```
 Data for dockerfile
 
---FROM maven:3.8.3-openjdk-17
-
---COPY . /opt 
-
---WORKDIR /opt
-
---RUN rm -rf src/main/resources/application.properties
-
---RUN cp -rf application.properties src/main/resources
-
---RUN mvn clean package
-
---WORKDIR /opt/target
-
---EXPOSE 8080
-
---CMD ["java" , "-jar" , "student-registration-backend-0.0.1-SNAPSHOT.jar"]
+```shell
+FROM maven:3.8.3-openjdk-17
+COPY . /opt 
+WORKDIR /opt
+RUN rm -rf src/main/resources/application.properties
+RUN cp -rf application.properties src/main/resources
+RUN mvn clean package
+WORKDIR /opt/target
+EXPOSE 8080
+CMD ["java" , "-jar" , "student-registration-backend-0.0.1-SNAPSHOT.jar"]
+```
 
 
 Build the docker image
@@ -154,25 +148,18 @@ nano dockerfile
 ```
 Data for dockerfile
 
---FROM node:25-alpine3.21
-
---COPY . /opt
-
---WORKDIR /opt
-
---RUN apk update -y
-
---RUN apk add apache2
-
---RUN npm install
-
---RUN npm run build
-
---RUN cp -rf dist/* /var/www/localhost/htdocs/
-
---EXPOSE 80
-
---CMD ["httpd" , "-D" , "FOREGROUND"]
+```shell
+FROM node:25-alpine3.21
+COPY . /opt
+WORKDIR /opt
+RUN apk update -y
+RUN apk add apache2
+RUN npm install
+RUN npm run build
+RUN cp -rf dist/* /var/www/localhost/htdocs/
+EXPOSE 80
+CMD ["httpd" , "-D" , "FOREGROUND"]
+```
 
 Build docker image
 
